@@ -1,9 +1,9 @@
-PWD /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal
+PWD /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.tex
-OUTPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.log
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.tex
+OUTPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.log
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
@@ -145,8 +145,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/catchfile.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/catchfile.sty
 INPUT /dev/null
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.w18
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.w18
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.w18
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.w18
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/transparent.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/transparent.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/soul/soul.sty
@@ -182,11 +182,11 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aex
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aex
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aux
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aux
-OUTPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aux
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aex
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aex
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aux
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aux
+OUTPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aux
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -205,14 +205,14 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-OUTPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-OUTPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.pdf
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+OUTPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+OUTPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.pdf
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
@@ -252,9 +252,9 @@ INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aux
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
-INPUT /Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aux
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
+INPUT /Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.out
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

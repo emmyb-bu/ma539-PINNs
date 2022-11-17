@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1668657633 "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.tex" "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.pdf" "MA539_Project_Proposal" 1668657806
-  "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.aux" 1668657634 1108 46885ab96501fc7f9950ff07ce8b8ba0 ""
-  "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.tex" 1668657805 10711 07f2fb4803460c84b7d48f20b3c276af ""
+["pdflatex"] 1668658711 "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.tex" "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.pdf" "MA539_Project_Proposal" 1668658725
+  "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.aux" 1668658712 1108 46885ab96501fc7f9950ff07ce8b8ba0 ""
+  "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.tex" 1668658725 10792 00ebf0ab27b4c1055315acec9dc2d5da ""
   "/Users/emmyb320/Library/texmf/tex/latex/mmacells/mmacells.sty" 1631056990 29769 7fb087aae14c1535d043b7eed5b295f5 ""
-  "/dev/null" 1668657805 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1668658724 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -142,13 +142,13 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "MA539_Project_Proposal.aux" 1668657634 1108 46885ab96501fc7f9950ff07ce8b8ba0 "pdflatex"
-  "MA539_Project_Proposal.out" 1668657634 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "MA539_Project_Proposal.tex" 1668657805 10711 07f2fb4803460c84b7d48f20b3c276af ""
+  "MA539_Project_Proposal.aux" 1668658712 1108 46885ab96501fc7f9950ff07ce8b8ba0 "pdflatex"
+  "MA539_Project_Proposal.out" 1668658712 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "MA539_Project_Proposal.tex" 1668658725 10792 00ebf0ab27b4c1055315acec9dc2d5da ""
   (generated)
+  "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.log"
+  "/Users/emmyb320/Documents/GitHub/ma539-PINNs/Proposal/MA539_Project_Proposal.pdf"
   "MA539_Project_Proposal.aux"
   "MA539_Project_Proposal.pdf"
   "MA539_Project_Proposal.out"
   "MA539_Project_Proposal.log"
-  "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.pdf"
-  "/Users/emmyb320/Documents/Undergrad/Fall 2022/CAS MA 539/Project/Proposal/MA539_Project_Proposal.log"

@@ -139,8 +139,8 @@ GitHub Repository:  \url{https://github.com/emmyb-bu/ma539-PINNs}
 \section*{Physics-Informed Neural Networks}
 
 In this project, I will explore physics-informed neural networks (PINNs) in {\em Julia} using existing, extensible packages that implement neural networks (i.e., Lux.jl), automatic differentiation (e.g., Zygote.jl, ForwardDiff.jl, etc.), and optimization (e.g., Optimisers.jl).
-PINNs use neural networks to parameterize solutions by minimizing the the difference between the left-hand and right-hand side of a PDE as a least-squares problem.
-Specifically, let $u(\vec x,t)$ such that $\partial_t u + \mathcal{N}[u] = 0$ for $\vec x \in \Omega$ and $t \in [0,t_1]$ with boundary conditions specified as a collection of $n$ points $((\vec x_i,t_i),u_i)_{i=1}^n$ with $\vec x_i \in \partial \Omega$.
+PINNs use neural networks to parameterize solutions by minimizing the difference between the left-hand and right-hand side of a PDE as a least-squares problem.
+Specifically, let $u(\vec x,t)$ such that $\partial_t u + \mathcal{N}[u] = 0$ for $\vec x \in \Omega$ and $t \in [0,t_1]$ with boundary data specified as a collection of $n$ points $((\vec x_i,t_i),u_i)_{i=1}^n$ with $\vec x_i \in \partial \Omega$.
 Next, the solution $u(\vec x, t|\vec \lambda)$ is modeled as a neural network that takes an array $(\vec x,t)$ as an input and returns a value of $u$, where $\vec \lambda \in \R^p$ are the weights and biases of the neural network.
 The PINN is fit by solving the optimization problem:
 \begin{align}
@@ -150,9 +150,9 @@ The PINN is fit by solving the optimization problem:
 	\int_\Omega\left( | \partial_t u(\vec x,t| \vec \lambda)  + \mathcal{N}[u(\vec x,t | \vec \lambda)]|^2 \right)d \vec x dt + \frac{\alpha }{n}\sum_{i=1}^n|u(\vec x_i,t_i | \vec \lambda) - u_i|^2.
 	\label{PINNobj}
 \end{align}
-Here, the first term enforces that $u(\vec x,t| \vec \lambda)$ obeys the PDE and the second term enforces boundary conditions; $\alpha>0$ is a hyper-parameter.
-To solve the problem on the computer, integrals will be discretized by choosing a set of well-spaced collocation points using a method like Latin hypercube sampling; the factor of $1/t_1|\Omega|$ indicates that after discretization, the first term is a mean-square-error-like term.
-Derivatives like $\partial_t$ and those involved in $\mathcal{N}$ will be constructed using automatic differentiation of the neural network.
+Here, the first term enforces that $u(\vec x,t| \vec \lambda)$ obeys the PDE, and the second term enforces that the solution is fit to boundary data; $\alpha>0$ is a hyper-parameter.
+To solve the problem on the computer, integrals will be discretized by choosing a set of well-spaced collocation points using a method like Latin hypercube sampling; the factor of $1/t_1|\Omega|$ indicates that after discretization, the first term is a mean-square-error-like term; the boundary data may be discretized boundary conditions.
+Derivatives like $\partial_t$ and those involved in $\mathcal{N}$ will be constructed using automatic differentiation of the neural network's inputs.
 Additionally, the operator $\mathcal{N}_{\vec \mu}$ can be parameterized by additional parameters $\vec \mu \in \R^q$ which are optimized in addition to the parameters $\vec \lambda$ with the same objective function except the provided data belongs to the region $\Omega$ instead of as boundary conditions.
 In a non-ideal case, the data may constitute real-world/experimental data and the objective of the PINN is to learn the operator $\mathcal{N}_{\vec \mu}$.
 In this project, I will aim to implement this method in four cases:
@@ -162,7 +162,7 @@ In this project, I will aim to implement this method in four cases:
 		i \frac{\partial \psi}{\partial t} = -\frac{1}{2} \frac{\partial^2\psi}{\partial x^2} + V(x) \psi
 		\label{TDSE}
 	\end{gather}
-	The potential function will first be chosen to be $V(x) = 0$ and we will implement Dirichlet boundary conditions (i.e., the `infinite square well').
+	The potential function will first be chosen to be $V(x) = 0$, and we will implement Dirichlet boundary conditions (i.e., the `infinite square well').
 	Then, we will experiment with various other potentials which may include the quantum harmonic oscillator, the anharmonic oscillator, the double-well potential, and scattering potentials.
 	\item Discovering parameters in the potential function used in the 1D time-dependent Schr\"odinger; the potential may be parameterized in three ways:
 	\begin{enumerate}
