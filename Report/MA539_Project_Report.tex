@@ -158,10 +158,10 @@ GitHub Repository:  \url{https://github.com/emmyb-bu/ma539-PINNs}
 
 Physics-informed neural networks (PINNs) refer to a set of methods that employ the training of neural networks to approximate solutions to ordinary and partial differential equations.
 By choosing the right objective function, a trained neural network can take an independent variable such as position or time and output a dependent variable of interest.
-PINNs provide a useful alternative to traditional finite-difference methods because they more easily generalize to new partial differential equations and, with proper care, can address certain stiff equations that might be difficult to solve otherwise.
+PINNs provide a useful alternative to traditional finite-difference methods because they generalize to new partial differential equations and, with proper care, can address certain stiff equations that might be difficult to solve otherwise.
 Remarkably, many problems can be solved quite accurately by using relatively small neural networks, as demonstrated in this project.
 PINNs can also solve inverse problems in which one might be interested in estimating some parameter that appears in a partial differential equation given observed data.
-In this project, we explore the construction and training of PINNs for several partial differential equations using both the package NeuralPDE.jl and more manual constructions.
+In this project, we explore the construction and training of PINNs for partial differential equations using both the package NeuralPDE.jl and more manual constructions.
 
 \section{PINNs as a Least Squares Problem}
 
@@ -228,9 +228,9 @@ function waveLoss(model,params)
 end
 \end{minted}
 \end{singlespace}
-For the initial derivative, we chose $\left.\partial_t u(t,x)\right|_{t = 0} = 0$ and obtained the results pictured below:
+For the initial derivative, we chose $\left.\partial_t u(t,x)\right|_{t = 0} = 0$, optimization was performed using the BFGS algorithm, and we obtained the results pictured below:
+\begin{singlespace}
 \begin{center}
-	% \begin{singlespace}
 	\includegraphics[width=0.9\linewidth]{fig/custom_wave_eq_contour.pdf}
 	\\
 	Above: Contour plot of solution to wave equation found by training a custom neural network and custom loss function.
@@ -241,8 +241,8 @@ For the initial derivative, we chose $\left.\partial_t u(t,x)\right|_{t = 0} = 0
 	Evidently, the boundary conditions at $x = 1$ were not properly enforced during the training process because there is no reflection.
 	\\
 	\includegraphics[width=0.9\linewidth]{fig/custom_wave_eq_x.pdf}
-% \end{singlespace}
 \end{center}
+\end{singlespace}
 We see that there is no reflection at the boundary $x = 1$ at $t \approx 0.5$ despite what we might expect.
 This is a failure in training that we were not able to overcome; it seems that the parameters chosen here may correspond to a local minimum in the loss landscape where the non-zero value of $u$ at the $x = 1$ boundary near $t \approx 0.5$ does not significantly to the loss function.
 To attempt to overcome this, we chose a variety of different weights $A_b \gg A_c$ and added additional boundary points near $t \approx 0.5$ to no avail.
@@ -265,14 +265,14 @@ discretization = PhysicsInformedNN(chain, GridTraining([dx,dt]),
 	adaptive_loss = NonAdaptiveLoss(pde_loss_weights=1.0,bc_loss_weights=50))
 \end{minted}
 \end{singlespace}
-When doing this, we were able to successfully able to capture the reflection of the wave due to the dirichlet boundary conditions at both $x = 0$ and $x = 1$:
+When doing this, we were able to successfully capture the reflection of the wave due to the dirichlet boundary conditions at both $x = 0$ and $x = 1$:
 \begin{center}
 	% \begin{singlespace}
 	\includegraphics[width=0.9\linewidth]{fig/nice-wave-NeuralPDE.pdf}
 	\\
 		Above: A contour plot of the solution obtained using the NeuralPDE package.
 		In this case, there is reflection off the boundary at $x = 1$ as well as at $x = 0$.
-		However, note that $\sigma_0 = 0.04$ where $\sigma_0 = 0.025$ in the implementation without NeuralPDE.
+		However, note that $\sigma_0 = 0.04$ here where $\sigma_0 = 0.025$ in the implementation without NeuralPDE.
 		This may contribute to the presence of the reflection in this version.
 		Below: A plot over the variable $x$ at various times $t$.
 		Here reflection, the quality of the solution, and the unit wave speed is evident.
@@ -284,9 +284,10 @@ Although we were able to successfully capture the reflection, it was still neces
 Even for relatively simple partial differential equations and well-constructed libraries, solving partial differential equations using PINNs is a non-trivial task.
 
 An interesting experiment we performed was to not explicitly set a value of $\left.\partial_t u(t,x)\right|_{t = 0}$ to see if training would automatically impose a value.
-It turns out that it did; it seemed that training the PINN automatically caused the Gaussian packet to move in the $+x$ direction with unit velocity before reflecting against the boundary at $x = 0$.
+It turns out that it did; it seemed that training the PINN automatically selected that the Gaussian packet move in the $+x$ direction with unit velocity before reflecting against the boundary at $x = 1$.
 Interestingly, after some experimentation and data loss, the movement in the $+x$ direction is not consistent.
 It seems that a symmetry is broken when the loss function is optimized without an initial condition.
+\begin{singlespace}
 \begin{center}
 	\includegraphics[width=0.9\linewidth]{fig/wave-no-bcs-cont.pdf}
 	\\
@@ -294,8 +295,9 @@ It seems that a symmetry is broken when the loss function is optimized without a
 	Below: A plot over the variable $x$ at various times $t$.
 	Here we can see the symmetry of the reflection.
 	\\
-	\includegraphics[width=0.9\linewidth]{fig/wave-no-bcs-per-x.pdf}
+	\includegraphics[width=0.89\linewidth]{fig/wave-no-bcs-per-x.pdf}
 \end{center}
+\end{singlespace}
 
 
 
@@ -313,7 +315,7 @@ It seems that a symmetry is broken when the loss function is optimized without a
 	\section{Unsuccessful Implementation of the Schro\"odinger Equation with the NeuralPDE.jl Package}
 % \end{singlespace}
 
-As part of the various experiments we performed, we attempted to implement the Schr\"odinger equation in the NeuralPDE.jl package with the following set-up:
+As part of the various explorations we performed, we attempted to implement the Schr\"odinger equation in the NeuralPDE.jl package with the following set-up:
 \begin{singlespace}
 \begin{minted}[bgcolor=mintedbackground]{julia}
 eqs = [-Dt(ψim(t,x)) ~ -(1/2)*Dxx(ψre(t,x)),
@@ -326,13 +328,13 @@ bcs = [ψre(0,x) ~ sin(π*x) + sin(2π*x),
        ψim(t,1) ~ 0.]
 \end{minted}
 \end{singlespace}
-Curiously, when attempting this implementation there were few problems getting the training algorithm to fit the initial/boundary conditions, but it was difficult to observe the behavior of the true solution for times approximately greater than $t = 0.1$.
+Curiously, when attempting this implementation, there were few problems getting the training algorithm to fit the initial/boundary conditions, but it was difficult to observe the behavior of the true solution for times approximately greater than $t = 0.1$.
 Curiously, this was also a similar problem when implementing the diffusion equation both with and without the NeuralPDE library.
 It seems likely, however, that upon further iterations or access to greater computational resources that training would arrive at a solution.
 
 \section{Challenges Applying PINNs to Higher-Dimensional PDEs}
 
-As part of these explorations, we attempted to implement a PINN solution to the Liouville equation.
+As part of these explorations, we attempted to implement a PINN solution to the Liouville equation and 2D diffusion equation.
 This would be an especially useful application because the Liouville equation is often difficult to solve for non-trivial Hamiltonians, and many finite difference methods produce negative values for probability distributions.
 By explicitly constructing a neural network that is always non-negative, we can enforce that the solution be non-negative:
 \begin{singlespace}
@@ -343,7 +345,7 @@ chain = Lux.Chain(Dense(3,18,Lux.σ),Dense(18,18,Lux.σ),Dense(18,1,X -> X.^2))
 \end{singlespace}
 \noindent
 While we attempted to train this network, it suffered from the usual problems like not meeting the initial conditions.
-Because there are now three variables, each training step took a longer amount of time, so make manual adjustments to the training weights in the loss function was not feasible, so the attempt at solving the Liouville equation was abandoned for this project.
+Because there are now three variables, each training step took a longer amount of time, so making manual adjustments to the training weights in the loss function was not feasible, so the attempt at solving the Liouville equation was abandoned for this project.
 
 \section{Challenges of Inverse Problems}
 
@@ -355,6 +357,10 @@ However, these files were lost and not reproduced.
 
 \section{Further Work and Useful Applications}
 
+\footnote{I did not get as far on this project as I was hoping.
+Last week, my computer broke down, and I lost a substantial amount of data including many scripts and saved parameters for this project.
+I think I was able to reproduce the essential parts of this project, but I was able to experiment a bit more than is here.}
+
 There are many open directions to explore given the code written for this project.
 It would be interesting to implement this code on several distinct partial differential equations to understand how the nature of an equation influences the training process.
 It would be additionally interesting to attempt to apply more powerful computational resources (like graphics processing units) in order to tackle partial differential equations with many independent variables (e.g., the Liouville equation, three-dimensional wave equation).
@@ -362,6 +368,7 @@ Revisiting the Schr\"odinger equation would also be interesting because it is im
 Revisting the Sch\"odinger equation would also provide for an interesting context for exploring the nature of inverse problems.
 For example, is it possible to recover parameters that may appear in the potential of a Hamiltonian by minimizing the divergence between the probability density function predicted by the wave function and observations of particle locations?
 
+\appendix
 \section{Viewing Code and Loading Parameters}
 
 All code is on the GitHub repository.
@@ -369,11 +376,8 @@ For reproducibility, the trained parameters have been saved and can be loaded in
 The essential code for this project is in the ./PINNs\_from\_scratch and ./NeuralPDE directories.
 
 
-\subsection*{A note:}
 
-I did not get as far on this project as I was hoping.
-Last week, my computer broke down, and I lost a substantial amount of data including many scripts and saved parameters for this project.
-I think I was able to reproduce the essential parts of this project, but I was able to experiment a bit more than is here.
+
 
 \end{document}
 

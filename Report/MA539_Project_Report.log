@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.7)  16 DEC 2022 02:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.7)  16 DEC 2022 11:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -742,16 +742,16 @@ Package pdftex.def Info: fig/nice-wave-NeuralPDE-per-t.pdf  used on input line 2
 <fig/wave-no-bcs-cont.pdf, id=109, 602.25pt x 401.5pt>
 File: fig/wave-no-bcs-cont.pdf Graphic file (type pdf)
 <use fig/wave-no-bcs-cont.pdf>
-Package pdftex.def Info: fig/wave-no-bcs-cont.pdf  used on input line 291.
+Package pdftex.def Info: fig/wave-no-bcs-cont.pdf  used on input line 292.
 (pdftex.def)             Requested size: 422.77664pt x 281.86288pt.
  [7 <./fig/nice-wave-NeuralPDE-per-t.pdf>]
 <fig/wave-no-bcs-per-x.pdf, id=117, 602.25pt x 401.5pt>
 File: fig/wave-no-bcs-per-x.pdf Graphic file (type pdf)
 <use fig/wave-no-bcs-per-x.pdf>
-Package pdftex.def Info: fig/wave-no-bcs-per-x.pdf  used on input line 297.
-(pdftex.def)             Requested size: 422.77664pt x 281.86288pt.
- [8 <./fig/wave-no-bcs-cont.pdf>]
-Overfull \hbox (1.32281pt too wide) in paragraph at lines 313--313
+Package pdftex.def Info: fig/wave-no-bcs-per-x.pdf  used on input line 298.
+(pdftex.def)             Requested size: 418.08168pt x 278.7323pt.
+
+Overfull \hbox (1.32281pt too wide) in paragraph at lines 315--315
 []\OT1/cmr/bx/n/14.4 Unsuccessful Im-ple-men-ta-tion of the Schro^^?odinger Equa-tion with
  []
 
@@ -759,32 +759,35 @@ Overfull \hbox (1.32281pt too wide) in paragraph at lines 313--313
 
 runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o MA539_Project_Report.out.pyg MA539_Project_Report.pyg)...executed.
 
-(./MA539_Project_Report.out.pyg) [9 <./fig/wave-no-bcs-per-x.pdf>]
+[8 <./fig/wave-no-bcs-cont.pdf> <./fig/wave-no-bcs-per-x.pdf>] (./MA539_Project_Report.out.pyg)
 \openout4 = `MA539_Project_Report.pyg'.
 
 runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o MA539_Project_Report.out.pyg MA539_Project_Report.pyg)...executed.
 
- (./MA539_Project_Report.out.pyg) [10] [11] (./MA539_Project_Report.aux)
+ (./MA539_Project_Report.out.pyg) [9] [10] [11] (./MA539_Project_Report.aux)
 Package rerunfilecheck Info: File `MA539_Project_Report.out' has not changed.
-(rerunfilecheck)             Checksum: 9DEA8A467E736292AADF627AE1699C0C;2416.
+(rerunfilecheck)             Checksum: 914E08861FC492AFF6222B09B38AD48A;2417.
 runsystem(rm MA539_Project_Report.pyg)...executed.
 
 runsystem(rm MA539_Project_Report.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 23018 strings out of 478268
- 449330 string characters out of 5846347
- 775363 words of memory out of 5000000
- 40825 multiletter control sequences out of 15000+600000
- 481576 words of font info for 73 fonts, out of 8000000 for 9000
+ 23033 strings out of 478268
+ 449474 string characters out of 5846347
+ 775364 words of memory out of 5000000
+ 40833 multiletter control sequences out of 15000+600000
+ 483744 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,10n,92p,686b,1018s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MA539_Project_Report.pdf (11 pages, 572905 bytes).
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MA539_Project_Report.pdf (11 pages, 587595 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 223 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  27 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

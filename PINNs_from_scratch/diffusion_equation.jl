@@ -86,7 +86,7 @@ prob = OptimizationProblem(optf, initParams)
 @time sol = solve(prob,OptimizationOptimJL.BFGS(),maxiters=200,callback=((_,lossval) -> (println("loss = ",lossval); false)))
 
 # save parameters:
-jldsave("diffusion_eq_NN_params.jld2"; params=sol.u);
+# jldsave("diffusion_eq_NN_params.jld2"; params=sol.u);
 
 @info "Done solving and saving"
 
@@ -113,5 +113,5 @@ for t in 0:0.1:Tmax
 #     plot!(pltpts[1,:],vec(ϕmodel(pltpts, loaded_params)),label=:none)
 end
 scatter!(∂t0pts[1,:],ϕt0,label=:none)
-plot!(xlabel=L"x",ylabel=L"\phi")
+plot!(xlabel=L"x",ylabel=L"u(t,x)")
 

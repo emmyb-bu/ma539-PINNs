@@ -89,6 +89,8 @@ using Optimization, OptimizationOptimJL, OptimizationOptimisers
 
 # uncomment to load parameters:
 # loaded_params = jldopen("wave_eq_NN_params-split.jld2")["params"];
+# loaded_params = jldopen("wave_eq_NN_params-special.jld2")["params"];
+# loaded_params = jldopen("wave_eq_NN_params-nobdcds.jld2")["params"];
 
 optf = OptimizationFunction((p,_)->waveLoss(ϕmodel,p), Optimization.AutoForwardDiff())
 # prob = OptimizationProblem(optf, initParams)
@@ -98,7 +100,7 @@ sol = solve(prob,OptimizationOptimJL.BFGS(),maxiters=100,callback=((_,lossval) -
 # sol = solve(prob,Optimisers.ADAM(0.05),maxiters=50,callback=((_,lossval) -> (println(lossval); false)))
 
 # save parameters:
-jldsave("wave_eq_NN_params-nobdcds.jld2"; params=sol.u);
+# jldsave("wave_eq_NN_params-nobdcds.jld2"; params=sol.u);
 
 @info "Done solving and saving"
 
@@ -121,4 +123,4 @@ for t in 0:0.1:Tmax
     plot!(meow[1,:],vec(ϕmodel(meow, sol.u)),label=:none)
 end
 scatter!(∂t0pts[1,:],ϕt0,label=:none)
-plot!(xlabel=L"x",ylabel=L"\phi")
+plot!(xlabel=L"x",ylabel=L"u(t,x)")
