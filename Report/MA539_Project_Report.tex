@@ -244,11 +244,12 @@ For the initial derivative, we chose $\left.\partial_t u(t,x)\right|_{t = 0} = 0
 \end{center}
 \end{singlespace}
 We see that there is no reflection at the boundary $x = 1$ at $t \approx 0.5$ despite what we might expect.
-This is a failure in training that we were not able to overcome; it seems that the parameters chosen here may correspond to a local minimum in the loss landscape where the non-zero value of $u$ at the $x = 1$ boundary near $t \approx 0.5$ does not significantly to the loss function.
+This is a failure in training that we were not able to overcome; it seems that the parameters chosen here may correspond to a local minimum in the loss landscape where the non-zero value of $u$ at the $x = 1$ boundary near $t \approx 0.5$ does not contribute significantly to the loss function.
 To attempt to overcome this, we chose a variety of different weights $A_b \gg A_c$ and added additional boundary points near $t \approx 0.5$ to no avail.
 
 This figure also shows that we made the boundary points near $x \sim 0.5$ denser because we want the Gaussian peak of the initial condition to be sampled and fitted properly.
 Getting the PINN to express this initial condition was a challenge, but setting $A_b$ to be very large during the early stages of training helped overcome this issue.
+We also attempted something similar near $t \sim 0.5$ to try to enforce the Dirichlet boundary conditions at the time of reflection.
 It seems that training PINNs even on simpler examples like the wave equation can be a challenge.
 
 
@@ -364,6 +365,7 @@ I think I was able to reproduce the essential parts of this project, but I was a
 There are many open directions to explore given the code written for this project.
 It would be interesting to implement this code on several distinct partial differential equations to understand how the nature of an equation influences the training process.
 It would be additionally interesting to attempt to apply more powerful computational resources (like graphics processing units) in order to tackle partial differential equations with many independent variables (e.g., the Liouville equation, three-dimensional wave equation).
+We could also try to design the neural networks more intentionally so that they already have some structure we expect from the solution.
 Revisiting the Schr\"odinger equation would also be interesting because it is implicitly two coupled partial differential equations (the real and imaginary parts of the wave function).
 Revisting the Sch\"odinger equation would also provide for an interesting context for exploring the nature of inverse problems.
 For example, is it possible to recover parameters that may appear in the potential of a Hamiltonian by minimizing the divergence between the probability density function predicted by the wave function and observations of particle locations?
