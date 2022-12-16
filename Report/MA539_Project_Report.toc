@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}PINNs as a Least Squares Problem}{2}{section.2}%
+\contentsline {section}{\numberline {3}The Wave Equation without the NeuralPDE.jl Package}{3}{section.3}%
+\contentsline {section}{\numberline {4}The Wave Equation with the NeuralPDE.jl Package}{6}{section.4}%
+\contentsline {section}{\numberline {5}Unsuccessful Implementation of the Schro\"odinger Equation with the NeuralPDE.jl Package}{9}{section.5}%
+\contentsline {section}{\numberline {6}Challenges Applying PINNs to Higher-Dimensional PDEs}{10}{section.6}%
+\contentsline {section}{\numberline {7}Challenges of Inverse Problems}{10}{section.7}%
+\contentsline {section}{\numberline {8}Further Work and Useful Applications}{11}{section.8}%
+\contentsline {section}{\numberline {9}Viewing Code and Loading Parameters}{11}{section.9}%
