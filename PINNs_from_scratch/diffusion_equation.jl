@@ -93,6 +93,8 @@ prob = OptimizationProblem(optf, initParams)
 
 using Plots, PlotThemes, LaTeXStrings; theme(:dao)
 
+# uncomment the line with the loaded_params variable to see loaded parameters
+
 let xs = 0:0.01:1, ts = 0:0.01:Tmax
 #     vals = reshape([ϕmodel([x, t], initParams)[1] for x in xs for t in ts],(length(xs),length(ts)));
     vals = reshape([ϕmodel([x, t], sol.u)[1] for x in xs for t in ts],(length(xs),length(ts)));
